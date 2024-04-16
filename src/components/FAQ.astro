@@ -1,0 +1,123 @@
+---
+import "@fontsource-variable/unbounded";
+import "@fontsource/poppins";
+const FAQs: { question: string; answer: string }[] = [
+  {
+    question: "What to do if the purchase was successful but no load received?",
+    answer: "dunno",
+  },
+  {
+    question: "The load did not went through and customer wants a refund.",
+    answer: "dunno rin",
+  },
+  { question: "How can I earn on this business", answer: "dunno hehe" },
+  {
+    question: "Do I need to have an internet to run this business?",
+    answer: "dunno",
+  },
+  {
+    question: "Do I need to have an internet to run this business?",
+    answer: "dunno",
+  },
+  {
+    question: "Do I need to have an internet to run this business?",
+    answer: "dunno",
+  },
+  {
+    question: "Do I need to have an internet to run this business?",
+    answer: "dunno",
+  },
+];
+
+const tabs: { label: string; href: string }[] = [
+  { label: "General", href: "/" },
+  { label: "Quick Start Guide", href: "/" },
+  { label: "Topups", href: "/" },
+  { label: "eWallets", href: "/" },
+  { label: "Licenses", href: "/" },
+  { label: "Miscellaneous", href: "/" },
+];
+---
+
+<div class="pt-10 pb-4 sm:pt-16 lg:overflow-hidden lg:pt-8 lg:pb-4">
+  <div class="mx-auto max-w-7xl lg:px-8">
+    <div class="z-0 relative lg:pt-12">
+      <h1 class="mt-4 w-full text-5xl font-bold tracking-tight text-center text-black sm:mt-5 sm:text-4xl lg:mt-6">
+        <span
+        class="inline sm:block"
+        style="font-family: Unbounded Variable;"
+        >
+          Frequently Asked
+          <span
+            class="text-5xl bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 inline-block text-transparent bg-clip-text"
+            >Questions</span
+          >
+        </span>
+      </h1>
+      
+
+      <div class="relative mx-auto max-w-7xl pb-8 px-4 sm:px-6 lg:px-8 py-4" style="font-family: Poppins">
+        <label class="input flex items-center gap-2 rounded-xl p-8 m-8">
+          <input type="text" class="grow" placeholder="Ask related questions" />
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 21L17.5001 17.5M20 11.5C20 16.1944 16.1944 20 11.5 20C6.80558 20 3 16.1944 3 11.5C3 6.80558 6.80558 3 11.5 3C16.1944 3 20 6.80558 20 11.5Z" stroke="#17563C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>  
+        </label>
+        <!-- MOBILE -->
+        
+          <div class="flex w-full justify-center">
+            <div class="sm:hidden flex items-center p-3">
+            
+            <div class="dropdown w-full">
+              <div tabindex="0" role="button" class="btn mb-1">
+                  Select Option
+                  <i class="fa-solid fa-chevron-down"></i>
+              </div>
+          
+              <ul tabindex="0" class="dropdown-content z-10 menu p-2 shadow bg-base-200 rounded-box w-52">
+                {tabs.map(({label,href})=>(
+                  <li><a href={href} class="font-lg" style="font-family: Poppins;">{label}</a></li>
+                ))}
+              </ul>
+          </div>
+          </div>
+      </div>
+
+        <!-- DESKTOP -->
+        <div class="hidden sm:flex navbar gap-[50px] justify-center">
+         
+          {tabs.map(({label,href})=>(
+            <a href={href} class="font-lg hover:pt-2 transition-all" style="font-family: Poppins;">{label}</a>
+          ))}
+      
+        </div>
+        {FAQs.map(({ question, answer }) => (
+          <div class="grid sm:grid-cols-2 grid-cols-1">
+            <div class="pr-4">
+              <div class="collapse collapse-plus shadow-lg mb-5 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-[#FFFFFFB2] to-[#FFFFFFB2]">
+                <input type="radio" name="my-accordion-3" checked="checked" />
+                <div class="collapse-title text-lg font-semibold text-[#17563C]">
+                  {question}
+                </div>
+                <div class="collapse-content">
+                  <p>{answer}</p>
+                </div>
+              </div>
+            </div>
+            <div class="pr-4">
+              <div class="collapse collapse-plus shadow-lg mb-5 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-[#FFFFFFB2] to-[#FFFFFFB2]">
+                <input type="radio" name="my-accordion-3" checked="checked" />
+                <div class="collapse-title text-lg font-semibold text-[#17563C]">
+                  {question}
+                </div>
+                <div class="collapse-content">
+                  <p>{answer}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>
