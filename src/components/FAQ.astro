@@ -66,7 +66,7 @@ const tabs: { label: string; href: string }[] = [
         <!-- MOBILE -->
         
           <div class="flex w-full justify-center">
-            <div class="sm:hidden flex items-center p-3">
+            <div class="md:flex lg:hidden items-center p-3">
             
             <div class="dropdown w-full">
               <div tabindex="0" role="button" class="btn mb-1">
@@ -84,7 +84,7 @@ const tabs: { label: string; href: string }[] = [
       </div>
 
         <!-- DESKTOP -->
-        <div class="hidden sm:flex navbar gap-[50px] justify-center">
+        <div class="lg:flex md:hidden navbar justify-between">
          
           {tabs.map(({label,href})=>(
             <a href={href} class="font-lg hover:pt-2 transition-all" style="font-family: Poppins;">{label}</a>
