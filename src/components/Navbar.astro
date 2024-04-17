@@ -103,15 +103,11 @@ const tabs: { label: string; href: string }[] = [
 
         <div id="nav-option-list" class="items-center hidden w-full lg:flex lg:w-auto lg:order-1">
             <ul class="flex flex-col font-medium p-4 mt-4 rounded-lg lg:p-0 lg:space-x-8 lg:flex-row lg:mt-0 lg:items-center">
+                {tabs.map((items)=>(
                 <li>
-                    <a href="/" class="block py-2 px-3 lg:p-0 rounded hover:bg-green-500 hover:text-white lg:hover:bg-transparent lg:hover:text-green-500" aria-current="page">Services We Offer</a>
+                    <a href={items.href} class="block py-2 px-3 lg:p-0 rounded hover:bg-green-500 hover:text-white lg:hover:bg-transparent lg:hover:text-green-500" aria-current="page">{items.label}</a>
                 </li>
-                <li>
-                    <a href="/" class="block py-2 px-3 lg:p-0 rounded hover:bg-green-500 hover:text-white lg:hover:bg-transparent lg:hover:text-green-500">User Guides</a>
-                </li>
-                <li>
-                    <a href="/" class="block py-2 px-3 lg:p-0 rounded hover:bg-green-500 hover:text-white lg:hover:bg-transparent lg:hover:text-green-500">FAQs</a>
-                </li>
+                ))}
                 <li>
                     <button id="dropdown" data-collapse-toggle="dropdown-retail" class="flex items-center justify-between w-full px-3 py-2 rounded lg:w-auto lg:p-0 hover:bg-green-500 hover:text-white lg:hover:bg-transparent lg:hover:text-green-500">
                         Be an eLoad Retailer

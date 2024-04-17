@@ -40,7 +40,7 @@ const tabs: { label: string; href: string }[] = [
 ---
 
 <div class="pt-10 pb-4 sm:pt-16 lg:overflow-hidden lg:pt-8 lg:pb-4">
-  <div class="mx-auto max-w-7xl lg:px-8">
+  <div class="mx-auto min-w-full lg:px-8">
     <div class="z-0 relative lg:pt-12">
       <h1 class="mt-4 w-full text-5xl font-bold tracking-tight text-center text-black sm:mt-5 sm:text-4xl lg:mt-6">
         <span
@@ -66,7 +66,7 @@ const tabs: { label: string; href: string }[] = [
         <!-- MOBILE -->
         
           <div class="flex w-full justify-center">
-            <div class="md:flex lg:hidden items-center p-3">
+            <div class="sm:hidden flex items-center p-3">
             
             <div class="dropdown w-full">
               <div tabindex="0" role="button" class="btn mb-1">
@@ -84,7 +84,7 @@ const tabs: { label: string; href: string }[] = [
       </div>
 
         <!-- DESKTOP -->
-        <div class="lg:flex md:hidden navbar justify-between">
+        <div class="hidden sm:flex navbar w-full mx-auto gap-8 justify-center">
          
           {tabs.map(({label,href})=>(
             <a href={href} class="font-lg hover:pt-2 transition-all" style="font-family: Poppins;">{label}</a>
